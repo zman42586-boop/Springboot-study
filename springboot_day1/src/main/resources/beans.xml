@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 使用 Spring 来创建对象，在 Spring 中这些都称为 Bean -->
+    <bean id="hello" class="com.zhangjunjie.pojo.Hello">
+        <property name="str" value="Spring"/>
+    </bean>
+    <bean id="mysqlImpl" class="com.zhangjunjie.DAO.UserDaoMysqlImpl"></bean>
+    <bean id="OracleImpl" class="com.zhangjunjie.DAO.UserOracleImpl"></bean>
+
+    <bean id="ServiceImpl" class="com.zhangjunjie.Service.UserServiceImpl">
+        <property name="userDao" ref="mysqlImpl"></property>
+    </bean>
+
+<!--    <bean id="User" class="com.zhangjunjie.pojo.User">-->
+<!--        <constructor-arg index="0" value="哈哈哈哈"></constructor-arg>-->
+<!--    </bean>-->
+    <bean id="User" class="com.zhangjunjie.pojo.User">
+        <constructor-arg name="username" value="DDPG"></constructor-arg>
+    </bean>
+
+    <bean id="User2" class="com.zhangjunjie.pojo.User2"></bean>
+</beans>
