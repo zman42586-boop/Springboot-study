@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="Address" class="com.zhangjunjie.pojo.Address">
+        <property name="address" value="厦门翔安"></property>
+    </bean>
+
+    <bean id="Student1" class="com.zhangjunjie.pojo.Student">
+        <property name="name" value="罗根"></property>
+        <property name="address" ref="Address"></property>
+        <property name="books">
+            <array>
+                <value>book1</value>
+                <value>book2</value>
+                <value>book3</value>
+            </array>
+        </property>
+        <property name="hobbies">
+            <list>
+                <value>听歌</value>
+                <value>唱歌</value>
+                <value>写歌</value>
+            </list>
+        </property>
+
+        <property name="card">
+            <map>
+                <entry key="id card1" value="1111"></entry>
+                <entry key="id card2" value="222"></entry>
+                <entry key="id card3" value="333"></entry>
+            </map>
+        </property>
+
+        <property name="games">
+            <set>
+                <value>"LOL"</value>
+            </set>
+        </property>
+
+        <property name="wife">
+            <null></null>
+        </property>
+
+        <property name="info">
+            <props>
+                <prop key="班级">20000222</prop>
+                <prop key="年级">12121</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
