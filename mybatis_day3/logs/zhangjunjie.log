@@ -1,0 +1,13 @@
+[2026-01-08 21:31:22] DEBUG [com.zhangjunjie.dao.UserMapper.getUserById:135] - ==>  Preparing: select * from mybatis.user where id=?
+[2026-01-08 21:31:22] DEBUG [com.zhangjunjie.dao.UserMapper.getUserById:135] - ==> Parameters: 4(Integer)
+[2026-01-08 21:31:22] DEBUG [com.zhangjunjie.dao.UserMapper.getUserById:135] - <==      Total: 1
+[2026-01-08 21:42:39] DEBUG [com.zhangjunjie.dao.UserMapperTest:25] - debug
+[2026-01-08 21:42:39] INFO  [com.zhangjunjie.dao.UserMapperTest:26] - info
+[2026-01-08 21:42:39] ERROR [com.zhangjunjie.dao.UserMapperTest:27] - error
+[2026-01-08 21:43:00] DEBUG [com.zhangjunjie.dao.UserMapperTest:25] - debug
+[2026-01-08 21:43:00] INFO  [com.zhangjunjie.dao.UserMapperTest:26] - info
+[2026-01-08 21:43:00] ERROR [com.zhangjunjie.dao.UserMapperTest:27] - error
+[2026-01-08 21:44:14] DEBUG [com.zhangjunjie.dao.UserMapperTest:25] - debug
+[2026-01-08 21:44:14] INFO  [com.zhangjunjie.dao.UserMapperTest:26] - info
+[2026-01-08 21:44:14] ERROR [com.zhangjunjie.dao.UserMapperTest:27] - error
+[2026-01-09 10:00:07] ERROR [com.zhangjunjie.dao.UserMapperTest:27] - error
