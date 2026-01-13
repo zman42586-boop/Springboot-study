@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangjunjie.dao.StudentMapper">
+    <select id="getStudent" resultMap="StudentTeacher">
+        select * from student
+    </select>
+    <resultMap id="StudentTeacher" type="Student">
+        <id property="id" column="id"></id>
+        <id property="name" column="name"></id>
+<!--        解决teacher=null的问题-->
+<!--        这个 teacher 属性的值，请用我刚才查到的 tid 列作为参数，去调用 TeacherMapper.getTeacherById 方法查出来。”-->
+        <association property="teacher" column="tid" javaType="Teacher" select="com.zhangjunjie.dao.TeacherMapper.getTeacherById"></association>
+    </resultMap>
+</mapper>
