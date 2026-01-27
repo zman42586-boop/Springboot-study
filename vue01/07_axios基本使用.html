@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        // axios({
+        //     method:'get',
+        //     url:'http://localhost:8080/article/getAll'
+        // }).then(result=>{
+        //     console.log(result.data)
+        // }).catch(error=>{
+        //     console.log(error)
+        // })
+        let article={
+            title:'明天会更好',
+            category:'时事',
+            time:'2021-01-15',
+            state:'已发布'
+        }
+        axios({
+            method:'post',
+            url:'http://localhost:8080/article/add',
+            data:article
+        }).then(result=>{
+            console.log(result.data)
+        }).catch(error=>{
+            console.log(error)
+        })
+    </script>
+</body>
+</html>

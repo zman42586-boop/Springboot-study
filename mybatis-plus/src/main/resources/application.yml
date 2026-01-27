@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 建议加上时区和字符集配置，防止乱码
+    url: jdbc:mysql://localhost:3306/mybatis_plus?serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+    username: root
+    password: 123456
+
+# MyBatis-Plus 配置 (既然用了 MyBatis-Plus，建议把 mybatis 改为 mybatis-plus)
+mybatis-plus:
+  configuration:
+    # 开启驼峰命名转换 (MyBatis-Plus 默认其实就是开启的，不写也行)
+    map-underscore-to-camel-case: true
+    # 打印 SQL 语句到控制台，方便调试
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

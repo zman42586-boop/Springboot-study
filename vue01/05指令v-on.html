@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="money">点我有惊喜</button> &nbsp;
+        <button @click="love">再点更惊喜</button>
+    </div>
+
+    <script type="module">
+        //导入vue模块
+        import { createApp} from 'https://cdn.staticfile.net/vue/3.3.4/vue.esm-browser.js'
+        //创建vue应用实例
+        createApp({
+            data() {
+                return {
+                    //定义数据
+                }
+            },
+            methods: {
+                money:function(){
+                    alert("ddddddddd钱来")
+                },
+                love:function(){
+                    alert("ddddddddd人来")
+                }
+            }
+        }).mount("#app");//控制html元素
+
+    </script>
+</body>
+</html>
